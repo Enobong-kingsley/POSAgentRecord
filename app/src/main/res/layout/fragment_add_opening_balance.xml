@@ -93,7 +93,7 @@
     <Button
         android:layout_width="296dp"
         android:layout_height="54dp"
-        android:background="@drawable/mybutton"
+        android:background="@color/Orange"
         android:text="Add Opening Balance"
         android:textAllCaps="false"
         android:textColor="@color/background"

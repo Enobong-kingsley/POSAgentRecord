@@ -118,7 +118,7 @@
         />
 
     <TextView
-        android:id="@+id/tranfer_fee_tivi"
+        android:id="@+id/transfer_fee_tivi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -127,8 +127,8 @@
         app:layout_constraintLeft_toLeftOf="@id/paidCharge_tivi"
         />
     <EditText
-        android:id="@+id/tranfer_fee_editText"
-        app:layout_constraintTop_toBottomOf="@id/tranfer_fee_tivi"
+        android:id="@+id/transfer_fee_editText"
+        app:layout_constraintTop_toBottomOf="@id/transfer_fee_tivi"
         app:layout_constraintLeft_toLeftOf="@id/amountCharged_EditText"
         android:layout_width="325dp"
         android:layout_height="51dp"
@@ -143,13 +143,14 @@
         android:layout_marginStart="54dp"
         android:layout_marginEnd="61dp"
         android:layout_marginBottom="375dp"
+        android:requiresFadingEdge="horizontal"
         android:text="@string/save"
-        android:background="@drawable/mybutton"
+        android:background="@color/Orange"
         android:textAllCaps="false"
         android:textColor="@color/background"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/tranfer_fee_editText"
+        app:layout_constraintTop_toBottomOf="@id/transfer_fee_editText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
 
