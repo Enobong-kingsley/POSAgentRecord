@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Dashboard">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:title="@string/Dashboard"
+            app:titleTextColor="@color/background"
+            android:layout_width="match_parent"
+            android:background="@color/Orange"
+            app:navigationIcon="@drawable/ic_arrow_back_black_24dp"
+            android:layout_height="?attr/actionBarSize"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dashboard_bar"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:background="@color/Orange"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="55dp">
+
+
+        <TextView
+            android:id="@+id/welcome_Owner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="@string/Welcome_text"
+            android:layout_marginEnd="100dp"
+            android:textColor="@color/background"
+            android:textStyle="normal"
+            android:layout_marginTop="15dp"
+            />
+
+
+        <EditText
+            android:id="@+id/Owners_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="15dp">
+        </EditText>
+
+        <TextView
+            android:id="@+id/Total_Charges_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Total Charges"
+            android:textStyle="bold"
+            android:textColor="@color/background"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="266dp"
+            android:layout_marginTop="31dp"/>
+
+
+        <EditText
+        android:id="@+id/Total_Charges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textStyle="bold"
+        android:textColor="@color/background"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="282dp"
+        android:layout_marginRight="63dp"
+        android:layout_marginTop="31dp">
+    </EditText>
+
+        <EditText
+            android:id="@+id/currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="282dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="77dp"
+            android:text="@string/Naira"
+            android:textColor="@color/background"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="80dp"
+                app:layout_constraintBottom_toBottomOf="@id/Total_Charges_text">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/opening_constraint"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/opening_balance"
+                        android:layout_width="115dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:cardBackgroundColor="@color/background"
+                        android:layout_margin="8dp"
+                        android:layout_height="52dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="115dp"
+                            android:layout_height="52dp">
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/closing_balance"
+                        android:layout_width="115dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/opening_balance"
+                        app:cardBackgroundColor="@color/background"
+                        android:layout_margin="8dp"
+                        android:layout_height="52dp">
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/transaction_fee"
+                        android:layout_width="115dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/closing_balance"
+                        app:cardBackgroundColor="@color/background"
+                        android:layout_margin="8dp"
+                        android:layout_height="52dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="115dp"
+                            android:layout_height="52dp">
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/net_profit"
+                        android:layout_width="115dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/transaction_fee"
+                        app:cardBackgroundColor="@color/background"
+                        android:layout_margin="8dp"
+                        android:layout_height="52dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="115dp"
+                            android:layout_height="52dp">
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </ScrollView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageView
+        android:id="@+id/empty_Logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        app:srcCompat="@drawable/empty_logo"
+        android:layout_marginTop="324dp"
+        android:layout_marginBottom="284dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/tv_Dashboard_Transactions"
+        android:textColor="@color/Orange"
+        android:text="Transactions"
+        android:textStyle="bold"
+        android:layout_marginStart="25sp"
+        android:layout_marginTop="205sp"
+        />
+
+    <ImageView
+        android:id="@+id/Date_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_event_black_24dp"
+        android:scaleType="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginStart="220dp"
+        app:layout_constraintTop_toTopOf="@+id/tv_Dashboard_Transactions"
+        app:layout_constraintLeft_toRightOf="@+id/tv_Dashboard_Transactions"
+        />
+
+    <ImageView
+        android:id="@+id/csv_icon"
+        android:layout_width="21dp"
+        android:layout_height="23dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="center"
+        app:srcCompat="@drawable/ic_csv"
+        app:layout_constraintLeft_toRightOf="@+id/Date_icon"
+        app:layout_constraintTop_toTopOf="@+id/Date_icon" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintTop_toBottomOf="@id/dashboard_bar"
+        android:visibility="visible"
+        android:padding="10dp"
+        android:layout_margin="30dp"
+        app:srcCompat="@drawable/empty_logo"
+        android:layout_marginTop="324dp"
+        android:layout_marginBottom="0dp"/>
+    
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="657dp"
+        android:id="@+id/nav_view"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
