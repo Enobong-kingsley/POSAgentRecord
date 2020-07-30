@@ -25,7 +25,7 @@ private lateinit var binding : FragmentLandingBinding
     ): View? {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_landing, container, false )
-        binding.login.setOnClickListener { findNavController().navigate(R.id.addTransactionFragment) }
+        binding.login.setOnClickListener { findNavController().navigate(R.id.afterlanding) }
         binding.signup.setOnClickListener { findNavController().navigate(R.id.signupscreen) }
         return binding.root
     }
