@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/landingFragment"
+    android:id="@+id/navigation_items">
+
+    <fragment
+        android:id="@+id/landingFragment"
+        android:name="com.chuks.posagentrecord.LandingFragment"
+        android:label="fragment_landing"
+        tools:layout="@layout/fragment_landing" />
+    <fragment
+        android:id="@+id/afterlanding"
+        android:name="com.chuks.posagentrecord.LoginScreen"
+        android:label="fragment_afterlanding"
+        tools:layout="@layout/fragment_loginscreen" />
+    <fragment
+        android:id="@+id/signupscreen"
+        android:name="com.chuks.posagentrecord.signupscreen"
+        android:label="fragment_signupscreen"
+        tools:layout="@layout/fragment_signupscreen" />
+    <fragment
+        android:id="@+id/dashboard"
+        android:name="com.chuks.posagentrecord.Dashboard"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/addOpeningBalance"
+        android:name="com.chuks.posagentrecord.AddOpeningBalance"
+        android:label="fragment_add_opening_balance"
+        tools:layout="@layout/fragment_add_opening_balance" />
+    <fragment
+        android:id="@+id/addTransactionFragment"
+        android:name="com.chuks.posagentrecord.AddTransactionFragment"
+        android:label="fragment_add_transaction"
+        tools:layout="@layout/fragment_add_transaction" />
+    <fragment
+        android:id="@+id/settingsFragment2"
+        android:name="com.chuks.posagentrecord.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/recyclerList"
+        android:name="com.chuks.posagentrecord.recyclerList"
+        android:label="fragment_recycler_list"
+        tools:layout="@layout/dashboard_list_item" />
+</navigation>

@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">POSAgentRecord</string>
+    <string name="logo_main">logo</string>
+    <string name="signup_pg_txt">Welcome to   Agent Record\n Keeping App</string>
+    <string name="signup_pg_logo">signup_pg_logo</string>
+    <string name="some_id">\u00EF\u0086\u00A0</string>
+    <string name="signup">Signup</string>
+    <string name="Dashboard">Dashboard</string>
+    <string name="Naira">\u20A6</string>
+    <string name="add_opening_balance">Add Opening Balance"</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_dashboard">Dashboard</string>
+    <string name="navigation_settings">Settings</string>
+    <string name="add">Add</string>
+    <string name="Welcome_text">Welcome,</string>
+    <string name="opening_bal">Opening Bal</string>
+    <string name="transaction_type_tivi">Transaction Type</string>
+    <string name="withdrawal_button">Withdrawal</string>
+    <string name="transfer_button">Transfer</string>
+    <string name="paid_charge_with_text">Paid charge with</string>
+    <string name="Pos_button">Pos</string>
+    <string name="Cash_button">Cash</string>
+    <string name="amount_charged_text">Amount Charged</string>
+    <string name="transaction_fee_tivi">Transaction Fee</string>
+    <string name="transaction_fee">Transfer Fee</string>
+    <string name="tranfer_fee">Transfer Fee</string>
+    <string name="save">Save</string>
+    <string name="Settings">Settings</string>
+    <string name="company_name_text">Company Name</string>
+    <string name="email_txt">Email</string>
+    <string name="About_text">About</string>
+    <string name="share_txt">Share</string>
+    <string name="sign_out_txt">Sign Out</string>
+    <string name="String">Login</string>
+    <string name="title_activity_home_host">HomeHostActivity</string>
+<!--    <string name="title_activity_home_host_actiivty">MainActivity</string>-->
+<!--    <string name="title_activity_home_host">MainActivity</string>-->
+</resources>

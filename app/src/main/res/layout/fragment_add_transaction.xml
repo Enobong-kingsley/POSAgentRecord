@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".addTransactionFragment">
+
+
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/my_appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                 <androidx.appcompat.widget.Toolbar
+                            android:id="@+id/my_toolbar"
+                            android:layout_width="match_parent"
+                            app:title="Add Transaction"
+                            app:titleTextColor="@color/background"
+                            app:navigationIcon="@drawable/white_navigation_button"
+                            android:layout_height="?attr/actionBarSize" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <TextView
+                android:id="@+id/transaction_type_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="631dp"
+                android:text="@string/transaction_type_tivi"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/my_appbar" />
+
+            <RadioGroup
+                android:id="@+id/RadioGroup1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/transaction_type_text">
+
+                <RadioButton
+                    android:id="@+id/radio_withdrawal"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="23dp"
+                    android:text="@string/withdrawal_button" />
+
+                <RadioButton
+                    android:id="@+id/radio_Transfer"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/transfer_button" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/paidCharge_tivi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/paid_charge_with_text"
+                android:layout_marginTop="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/transaction_type_text"
+                app:layout_constraintTop_toBottomOf="@+id/RadioGroup1" />
+
+            <RadioGroup
+                android:id="@+id/RadioGroup2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/paidCharge_tivi">
+
+                <RadioButton
+                    android:id="@+id/radioButton_pos"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="23dp"
+                    android:text="@string/Pos_button" />
+
+                <RadioButton
+                    android:id="@+id/radioButton_Cash"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Cash_button" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/amountCharged_tivi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/amount_charged_text"
+                app:layout_constraintLeft_toLeftOf="@id/paidCharge_tivi"
+                app:layout_constraintTop_toBottomOf="@+id/RadioGroup2" />
+
+            <EditText
+                android:id="@+id/amountCharged_EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/amountCharged_tivi"
+                app:layout_constraintTop_toBottomOf="@id/amountCharged_tivi" />
+
+            <TextView
+                android:id="@+id/transfer_fee_tivi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/tranfer_fee"
+                app:layout_constraintTop_toBottomOf="@id/amountCharged_EditText"
+                app:layout_constraintLeft_toLeftOf="@id/paidCharge_tivi"
+                />
+
+            <EditText
+                android:id="@+id/transfer_fee_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/amountCharged_EditText"
+                app:layout_constraintTop_toBottomOf="@id/transfer_fee_tivi" />
+
+            <Button
+                android:id="@+id/buttonSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/curve_button"
+                android:text="@string/save"
+                android:textColor="@color/colorWhite"
+                android:textAllCaps="false"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/transfer_fee_editText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
