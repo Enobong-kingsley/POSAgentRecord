@@ -1,6 +1,7 @@
 package com.chuks.posagentrecord
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -36,8 +37,9 @@ class signupscreen : Fragment() {
 
             binding.myToolbar.setNavigationOnClickListener {
                 it.findNavController().popBackStack()
-//                it.findNavController().navigate(R.id.viewTransactionsAction)
+              //  it.findNavController().navigate(R.id.dashboard)
             }
+            binding.signupBtn.setOnClickListener {startActivity(Intent(context, HomeHostActivity::class.java))}
             return binding.root
     }
 
